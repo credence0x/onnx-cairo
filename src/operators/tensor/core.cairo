@@ -433,6 +433,7 @@ trait TensorTrait<T> {
     /// ```
     ///
     fn transpose(self: @Tensor<T>, axes: Span<usize>) -> Tensor<T>;
+    fn compress(self: @Tensor<T>, condition: Span<bool>, axis:Option<usize>) -> Tensor<T>;
     /// ## tensor.reduce_sum
     ///
     /// ```rust 

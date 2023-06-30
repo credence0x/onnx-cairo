@@ -30,6 +30,7 @@ use orion::operators::tensor::math::ln::ln_i32::core::ln_i32;
 use orion::operators::tensor::math::arithmetic::arithmetic_i32::{add, sub, mul, div};
 use orion::operators::tensor::math::cumsum::cumsum_i32::cumsum;
 use orion::operators::tensor::math::flatten::flatten_i32::flatten;
+use orion::operators::tensor::math::compress::compress_i32::compress;
 use orion::operators::tensor::math::sinh::sinh_i32::core::sinh_i32;
 use orion::operators::tensor::math::tanh::tanh_i32::core::tanh_i32;
 use orion::operators::tensor::math::cosh::cosh_i32::core::cosh_i32;
@@ -136,6 +137,10 @@ impl Tensor_i32 of TensorTrait<i32> {
 
     fn flatten(self: @Tensor<i32>, axis: usize) -> Tensor<i32> {
         flatten(self, axis)
+    }
+
+    fn compress(self: @Tensor<i32>,condition:Span<bool>, axis: Option<usize>) -> Tensor<i32> {
+        compress(self, condition, axis)
     }
 
     fn sinh(self: @Tensor<i32>) -> Tensor<FixedType> {

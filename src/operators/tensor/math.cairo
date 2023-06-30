@@ -15,6 +15,7 @@ mod abs;
 mod ceil;
 mod cumsum;
 mod flatten;
+mod compress;
 mod sinh;
 mod tanh;
 mod cosh;
