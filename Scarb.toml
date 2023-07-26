@@ -9,3 +9,6 @@ homepage = "https://github.com/gizatechxyz/orion"
 sierra = "cairo-compile . -r"
 test = "cairo-test ."
 docgen = "cd docgen && cargo run"
+
+[lib]
+name = "orion" 
